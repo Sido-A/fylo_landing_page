@@ -22,7 +22,15 @@ a {
   color: $white;
 }
 
+a,
+p {
+  font-size: 0.875rem;
+  @include breakpoint(large) {
+    font-size: 1rem;
+  }
+}
 a {
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -33,12 +41,14 @@ h3 {
 }
 
 p {
+  font-size: 1rem;
   margin-top: 0;
   margin-bottom: 1.5em;
 }
 
 section {
   padding: 0 27px 160px;
+  background-color: $mainBlue;
 }
 
 button,
