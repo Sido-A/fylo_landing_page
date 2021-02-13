@@ -25,6 +25,11 @@
       align-items: center;
       margin-bottom: 30px;
       height: 80px;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
     }
 
     &__title {

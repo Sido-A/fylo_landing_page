@@ -212,6 +212,11 @@ header a:hover {
   height: 80px;
 }
 
+.features .feature__image img {
+  height: 100%;
+  width: auto;
+}
+
 .features .feature__title {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
