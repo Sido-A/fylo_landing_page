@@ -1,0 +1,14 @@
+.quotes {
+  &__grid {
+    @include breakpoint(large) {
+      display: flex;
+    }
+  }
+
+  .quote {
+    @include breakpoint(large) {
+      border: 1px solid red;
+      flex: 1;
+    }
+  }
+}

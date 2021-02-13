@@ -53,7 +53,6 @@ p {
 }
 
 section {
-  padding: 0 27px 160px;
   background-color: #181f2a;
 }
 
@@ -77,7 +76,23 @@ button:hover,
   background: linear-gradient(to right, #339ecc, #339ecc);
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 25px 20px 100px 20px;
+}
+
+@media screen and (min-width: 999px) {
+  .container {
+    padding: 73px 60px 87px 60px;
+  }
+}
+
 header {
+  background-color: #1c2431;
+}
+
+header .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: minmax(100px, 1fr) (auto)[3];
@@ -86,14 +101,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #1c2431;
-  padding: 25px 20px 50px 20px;
 }
 
 @media screen and (min-width: 999px) {
-  header {
+  header .container {
     grid-gap: 56px;
-    padding: 73px 80px;
   }
 }
 
@@ -124,17 +136,6 @@ header a:hover {
 .hero {
   position: relative;
   background-color: #1c2431;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
 }
 
 .hero::after {
@@ -156,6 +157,20 @@ header a:hover {
   }
 }
 
+.hero .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
 .hero > * {
   position: relative;
   z-index: 1;
@@ -167,7 +182,7 @@ header a:hover {
 }
 
 .hero h1 {
-  max-width: 900px;
+  max-width: 678px;
   font-size: 1.5em;
   line-height: 1.5;
   margin: 1.1em 0;
@@ -192,8 +207,10 @@ header a:hover {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   gap: 6vw 10vw;
-  max-width: 880px;
+  max-width: 920px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (min-width: 699px) {
@@ -206,6 +223,8 @@ header a:hover {
 @media screen and (min-width: 999px) {
   .features .features__grid {
     gap: 7vw 7vw;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 
@@ -261,6 +280,7 @@ header a:hover {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     max-width: none;
+    max-width: 1320px;
   }
 }
 
@@ -275,12 +295,6 @@ header a:hover {
 
 .productive__text {
   max-width: 650px;
-}
-
-@media screen and (min-width: 999px) {
-  .productive__text {
-    padding-right: 4rem;
-  }
 }
 
 .productive__text h2 {
@@ -307,5 +321,22 @@ header a:hover {
 .productive__text a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 999px) {
+  .quotes__grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .quotes .quote {
+    border: 1px solid red;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
