@@ -1,0 +1,33 @@
+//Fonts
+$font-title: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+//Primary colors for backgrounds
+$introBlue: #1c2431;
+$mainBlue: #181f2a;
+$footerBlue: #0b1523;
+$testimonialBlue: #202a3c;
+
+//Accent colors
+$ctaCyan: #65e2d9;
+$ctaBlue: #339ecc;
+$lightRed: #ff4242;
+
+//Neutral
+$white: #ffffff;
+
+//Breakpoints
+
+$breakpoints: (
+  small: 499px,
+  medium: 899px,
+  large: 999px,
+  xlarge: 1399px,
+);
+@mixin breakpoint($size) {
+  $breakpoint-value: map-get($breakpoints, $size);
+
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
