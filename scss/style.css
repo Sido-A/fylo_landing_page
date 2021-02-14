@@ -209,8 +209,6 @@ header a:hover {
   gap: 6vw 10vw;
   max-width: 920px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 @media screen and (min-width: 699px) {
@@ -223,8 +221,6 @@ header a:hover {
 @media screen and (min-width: 999px) {
   .features .features__grid {
     gap: 7vw 7vw;
-    padding-left: 60px;
-    padding-right: 60px;
   }
 }
 
