@@ -496,4 +496,119 @@ header a:hover {
     margin-top: 40px;
   }
 }
+
+.footer {
+  background-color: #0b1523;
+  font-size: 1rem;
+}
+
+.footer__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 35px 6%;
+}
+
+@media screen and (min-width: 699px) {
+  .footer__container {
+    -ms-grid-columns: repeat;
+        grid-template-columns: repeat;
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .footer__container {
+    -ms-grid-columns: 3fr 2fr 2fr 2fr auto;
+        grid-template-columns: 3fr 2fr 2fr 2fr auto;
+    -ms-grid-rows: 60px 1fr;
+        grid-template-rows: 60px 1fr;
+  }
+}
+
+@media screen and (min-width: 999px) {
+  .footer__logo {
+    grid-column: 1 / end;
+  }
+}
+
+.footer__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__address svg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 13px;
+          flex: 0 0 13px;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+
+.footer__contact a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 999px) {
+  .footer__contact {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.footer__contact a {
+  font-size: 0.875rem;
+}
+
+.footer__contact-phone, .footer__contact-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__contact-phone svg, .footer__contact-email svg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+
+.footer__contact-phone {
+  margin-bottom: 20px;
+}
+
+.footer__links1 a, .footer__links2 a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__links1 a:hover, .footer__links2 a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 999px) {
+  .footer__links1 {
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+}
+
+.footer__social svg {
+  height: 35px;
+  width: 35px;
+  fill: #fff;
+  margin-right: 16px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.footer__social svg:hover {
+  background-color: #fff;
+  fill: #0b1523;
+}
 /*# sourceMappingURL=style.css.map */
