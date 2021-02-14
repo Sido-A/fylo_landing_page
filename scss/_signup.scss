@@ -1,0 +1,24 @@
+.signup {
+  &__block {
+    background-color: $testimonialBlue;
+    padding: 45px 80px;
+    text-align: center;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    @include breakpoint(medium) {
+      grid-template-columns: 1fr 200px;
+      gap: 30px;
+    }
+  }
+
+  input[type="email"] {
+  }
+
+  input[type="submit"] {
+  }
+}
