@@ -366,6 +366,10 @@ header a:hover {
   border-bottom: 1px solid #fff;
 }
 
+.quotes {
+  padding-bottom: 200px;
+}
+
 .quotes__grid {
   position: relative;
   display: -ms-grid;
@@ -458,6 +462,14 @@ header a:hover {
   font-size: 0.5em;
 }
 
+.signup {
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  -webkit-transform: translateY(-248px);
+          transform: translateY(-248px);
+}
+
 .signup__block {
   border-radius: 5px;
   -webkit-box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
@@ -500,6 +512,7 @@ header a:hover {
 .footer {
   background-color: #0b1523;
   font-size: 1rem;
+  padding-top: 200px;
 }
 
 .footer__container {
@@ -507,22 +520,28 @@ header a:hover {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  gap: 35px 6%;
+  gap: 35px 0;
 }
 
 @media screen and (min-width: 699px) {
   .footer__container {
-    -ms-grid-columns: repeat;
-        grid-template-columns: repeat;
+    grid-column-gap: 25px;
   }
 }
 
 @media screen and (min-width: 999px) {
   .footer__container {
+    grid-column-gap: 35px;
     -ms-grid-columns: 3fr 2fr 2fr 2fr auto;
         grid-template-columns: 3fr 2fr 2fr 2fr auto;
     -ms-grid-rows: 60px 1fr;
         grid-template-rows: 60px 1fr;
+  }
+}
+
+@media screen and (min-width: 1399px) {
+  .footer__container {
+    grid-column-gap: 60px;
   }
 }
 
@@ -593,6 +612,11 @@ header a:hover {
     -ms-grid-column-align: right;
         justify-self: right;
   }
+}
+
+.footer__social {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .footer__social svg {
