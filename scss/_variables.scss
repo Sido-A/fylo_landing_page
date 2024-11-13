@@ -3,16 +3,29 @@ $font-title: "Raleway", sans-serif;
 $font-body: "Open Sans", sans-serif;
 
 //Primary colors for backgrounds
-$introBlue: #1c2431;
-$mainBlue: #181f2a;
-$footerBlue: #0b1523;
-$testimonialBlue: #202a3c;
-
+$introBlue: hsl(217, 27%, 15%);
+$mainBlue: hsl(217, 27%, 13%);
+$footerBlue: hsl(215, 52%, 9%);
+$testimonialBlue: hsl(219, 30%, 18%);
+$grayishBlue: hsl(233, 8%, 62%);
 //Accent colors
-$ctaCyan: #65e2d9;
-$ctaBlue: #339ecc;
-$lightRed: #ff4242;
+$ctaCyan: hsl(176, 68%, 64%);
+$ctaBlue: hsl(198, 60%, 50%);
+$lightRed: hsl(0, 100%, 63%);
 
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+//Font size
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xlg: 3.25rem; // 52px
 //Neutral
 $white: #ffffff;
 
@@ -22,16 +35,47 @@ $border-radius-circle: 30px;
 
 //Breakpoints
 
-$breakpoints: (
-  small: 499px,
-  medium: 699px,
-  large: 999px,
-  xlarge: 1399px,
+// $breakpoints: (
+//   small: 499px,
+//   medium: 699px,
+//   large: 999px,
+//   xlarge: 1399px,
+// );
+
+//640px 1024px 1400px
+$breakpoints-up: (
+  "small": "20em",
+  "medium": "40em",
+  "large": "64em",
+  "xlarge": "87.5em",
+);
+
+//639px 1023px 1399px
+$breakpoints-down: (
+  "small": "39.9375em",
+  "medium": "63.9375em",
+  "large": "87.4375em",
 );
 @mixin breakpoint($size) {
-  $breakpoint-value: map-get($breakpoints, $size);
+  $breakpoint-value: map-get($breakpoints-up, $size);
 
   @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+//For devices bigger than the given $size
+//breakpoints-up
+@mixin breakpoint-bigger-than($size) {
+  @media (min-width: map-get($breakpoints-up,$size)) {
+    @content;
+  }
+}
+
+//For devices smaller than the given $size
+//breakpoints-down
+@mixin breakpoint-smaller-than($size) {
+  @media (max-width: map-get($breakpoints-down,$size)) {
     @content;
   }
 }

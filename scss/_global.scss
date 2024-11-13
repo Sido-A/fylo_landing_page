@@ -1,5 +1,6 @@
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -15,6 +16,11 @@ body {
   color: $white;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+body.noscroll {
+  overflow: hidden;
 }
 
 *,
@@ -57,4 +63,18 @@ p {
 
 section {
   background-color: $mainBlue;
+}
+
+.hide-for-mobile {
+  //Hide for tablet and mobile
+  @include breakpoint-smaller-than(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide for desk top viewport width
+  @include breakpoint-bigger-than(large) {
+    display: none;
+  }
 }
